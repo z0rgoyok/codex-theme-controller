@@ -2,6 +2,8 @@
 
 Native macOS SwiftUI app for managing themes in running Codex instances.
 
+![demo](demo.gif)
+
 ## What & Why
 
 The app discovers running `Codex` processes and applies color themes via CDP (Chrome DevTools Protocol) — no manual PID/port lookup required.
