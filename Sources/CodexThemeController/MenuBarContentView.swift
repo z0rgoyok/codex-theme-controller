@@ -46,6 +46,11 @@ struct MenuBarContentView: View {
             }
             .disabled(model.injectableCount == 0 || model.isWorking)
 
+            Button("Launch Codex (port \(model.launchPortText))") {
+                model.launchCodexWithPort()
+            }
+            .disabled(model.isLaunching)
+
             Divider()
 
             Button("Quit") {
