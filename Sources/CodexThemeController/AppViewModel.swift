@@ -126,9 +126,20 @@ final class AppViewModel: ObservableObject {
             defer { isLaunching = false }
             do {
                 try await Self.runOpenCommand(port: port)
-                statusMessage = "Launched Codex on \(port). Applying \(theme.displayName)..."
+
+                // Let Codex boot and open the debug port
+                try? await Task.sleep(nanoseconds: 1_500_000_000)
+
+                statusMessage = "Applying \(theme.displayName) to Codex on port \(port)..."
 
                 let results = try await injector.applyTheme(port: port, theme: theme)
+
+                // Re-inject after the page settles — handles the case where the
+                // first injection hits about:blank or a loading screen that later
+                // navigates to the real content, destroying the injected <style>.
+                try? await Task.sleep(nanoseconds: 2_000_000_000)
+                _ = try? await injector.applyTheme(port: port, theme: theme)
+
                 statusMessage = "Launched and applied \(theme.displayName) to \(results.count) page target(s) on \(port)."
                 refresh()
             } catch {
