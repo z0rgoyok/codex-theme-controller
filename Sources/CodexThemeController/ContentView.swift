@@ -164,6 +164,8 @@ private struct ThemeCard: View {
             Palette(bg: 0x2E3440, surface: 0x3B4252, accent: 0x88C0D0, text: 0xE5E9F0, secondary: 0x5E81AC)
         case .monokai:
             Palette(bg: 0x272822, surface: 0x3E3D32, accent: 0x66D9EF, text: 0xF8F8F2, secondary: 0xA6E22E)
+        case .lmStudio:
+            Palette(bg: 0x003846, surface: 0x0A3B49, accent: 0x2EA4C3, text: 0xC3DBE2, secondary: 0x57C2DA)
         }
     }
 

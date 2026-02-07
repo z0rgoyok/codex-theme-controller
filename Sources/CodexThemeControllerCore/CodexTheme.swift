@@ -5,6 +5,7 @@ public enum CodexTheme: String, CaseIterable, Codable, Sendable, Identifiable {
     case dracula
     case nord
     case monokai
+    case lmStudio
 
     public var id: String { rawValue }
 
@@ -14,6 +15,7 @@ public enum CodexTheme: String, CaseIterable, Codable, Sendable, Identifiable {
         case .dracula: "Dracula"
         case .nord: "Nord"
         case .monokai: "Monokai"
+        case .lmStudio: "LM Studio"
         }
     }
 
@@ -64,6 +66,13 @@ public enum CodexTheme: String, CaseIterable, Codable, Sendable, Identifiable {
                 text: "#f8f8f2", accent: "#66d9ef", selection: "#49483e",
                 green: "#a6e22e", red: "#f92672", yellow: "#e6db74",
                 orange: "#fd971f", purple: "#ae81ff"
+            )
+        case .lmStudio:
+            Palette(
+                bg: "#003846", surface: "#0a3b49", surfaceAlt: "#0f4a58",
+                text: "#c3dbe2", accent: "#2ea4c3", selection: "#1a5e72",
+                green: "#56d6a9", red: "#e26d7d", yellow: "#d5c88a",
+                orange: "#d68a5c", purple: "#8ca0d9"
             )
         }
     }
