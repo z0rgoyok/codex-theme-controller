@@ -15,7 +15,7 @@ public enum CodexTheme: String, CaseIterable, Codable, Sendable, Identifiable {
         case .dracula: "Dracula"
         case .nord: "Nord"
         case .monokai: "Monokai"
-        case .lmStudio: "LM Studio"
+        case .lmStudio: "Teal"
         }
     }
 

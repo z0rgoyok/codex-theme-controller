@@ -13,7 +13,7 @@ It provides a menu bar (tray) icon and a standalone controller window.
 
 - Scan running Codex instances (`PID`, command, `--remote-debugging-port`).
 - Menu bar icon with quick actions: open window, refresh, apply to all, launch.
-- Themes: `Darcula`, `Dracula`, `Nord`, `Monokai`, `LM Studio`.
+- Themes: `Darcula`, `Dracula`, `Nord`, `Monokai`, `Teal`.
 - Selecting a theme immediately applies it to all running injectable Codex instances.
 - Batch apply via `Apply to All`.
 - Launch a new Codex instance with a specified debug port — the selected theme is applied automatically after launch.
